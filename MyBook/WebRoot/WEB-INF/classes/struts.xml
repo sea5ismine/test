@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<include file="struts-default.xml"></include>
+<package name="book" extends="struts-default">
+<action name="index" >
+<result>index.jsp</result>
+</action>
+<action name="returnMyJsp">
+<result>MyJsp.jsp</result>
+</action>
+<action name="MyJsp">
+<result>MyJsp.jsp</result>
+</action>
+<action name="delete">
+<result>delete.jsp</result>
+</action>
+<action name="AddAuthor">
+<result>AddAuthor.jsp</result>
+</action>
+<action name="AddAuthorBegin" class="book.BookAction" method="AddAuthor" >
+<result>addResult.jsp</result>
+</action>
+<action name="deleteBegin" class="book.BookAction" method="delete" >
+<result>addResult.jsp</result>
+</action>
+<action name="search">
+<result>search.jsp</result>
+</action>
+<action name="searchByBook">
+<result>searchByBook.jsp</result>
+</action>
+<action name="information" class="book.BookAction" method="information" >
+<result>information.jsp</result>
+</action>
+<action name="searchByBookBegin" class="book.BookAction" method="searchByBook">
+<result>result.jsp</result>
+</action>
+<action name="searchByName">
+<result>searchByName.jsp</result>
+</action>
+<action name="searchByNameBegin" class="book.BookAction" method="searchByName">
+<result>result.jsp</result>
+</action>
+<action name="AddBook">
+<result>AddBook.jsp</result>
+</action>
+<action name="AddBookBegin" class="book.BookAction" method="AddBook">
+<result>addResult.jsp</result>
+</action>
+</package>
+</struts>    
